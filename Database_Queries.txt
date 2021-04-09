@@ -1,0 +1,47 @@
+1) SELECT COUNT(Name) FROM city WHERE CountryCode = 'USA'; 274
+
+2) SELECT Population FROM country WHERE Name = 'Argentina'; 37032000
+
+
+2) SELECT LifeExpectancy FROM country WHERE Name = 'Argentina'; 75.1 
+
+
+3) SELECT Name FROM country ORDER BY LifeExpectancy DESC LIMIT 1; Andorra
+
+
+6) SELECT Name FROM city WHERE Name LIKE 'F%'LIMIT 25;
++---------------------------+
+| Name                      |
++---------------------------+
+| Fagatogo                  |
+| Florencio Varela          |
+| Formosa                   |
+| Francistown               |
+| Fortaleza                 |
+....etc. 
+
+
+7) SELECT COUNT(Name) FROM city WHERE CountryCode = 'CHN'; 363
+
+8) SELECT Name FROM country ORDER BY LifeExpectancy ASC LIMIT 1; Antarctica 
+
+9)  SELECT COUNT(Name) FROM Country;
++-------------+
+| COUNT(Name) |
++-------------+
+|         239 |
+
+10) SELECT Name FROM country ORDER BY Population DESC LIMIT 10;
++--------------------+
+| Name               |
++--------------------+
+| China              |
+| India              |
+| United States      |
+| Indonesia          |
+| Brazil             |
+| Pakistan           |
+| Russian Federation |
+| Bangladesh         |
+| Japan              |
+| Nigeria
