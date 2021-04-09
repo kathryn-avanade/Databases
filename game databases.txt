@@ -1,0 +1,33 @@
+mysql> USE katdb;
+Database changed
+
+mysql> CREATE TABLE Products (
+    -> description varchar(200) NOT NULL,
+    -> price decimal NOT NULL,
+    -> name varchar(100) NOT NULL,
+    -> agerating int DEFAULT '2',
+    -> id int AUTO_INCREMENT,
+    -> PRIMARY KEY(id) );
+Query OK, 0 rows affected (0.03 sec)
+
+
+
+mysql> CREATE TABLE Customers (
+    -> firstname varchar(20) NOT NULL,
+    -> secondname varchar(20) NOT NULL,
+    -> email varchar(50) UNIQUE NOT NULL,
+    -> id int AUTO_INCREMENT,
+    -> PRIMARY KEY(id) );
+Query OK, 0 rows affected (0.06 sec)
+
+
+
+mysql> CREATE TABLE Orders (
+    -> orderplaced TIMESTAMP NOT NULL,
+    -> id int AUTO_INCREMENT,
+    -> PRODUCT_ID int NOT NULL,
+    -> customer_id int NOT NULL,
+    -> PRIMARY KEY(id),
+    -> FOREIGN KEY(PRODUCT_ID) REFERENCES Products(id),
+    -> FOREIGN KEY(customer_id) REFERENCES Customers(id) );
+Query OK, 0 rows affected (0.05 sec)
