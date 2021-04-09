@@ -20,6 +20,8 @@
 | Fortaleza                 |
 ....etc. 
 
+Ends with Funabashi and Fukuyama 
+
 
 7) SELECT COUNT(Name) FROM city WHERE CountryCode = 'CHN'; 363
 
